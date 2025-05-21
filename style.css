@@ -1,61 +1,167 @@
+/* Reset gaya default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #009688;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  transition: font-size 0.3s ease;
+}
+
+header p {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  transition: font-size 0.3s ease;
+}
+
+header a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Section */
+section {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 1200px;
+}
+
+/* Tombol */
+button {
+  background-color: #009688;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #00796b;
+  transform: scale(1.05); /* Efek pembesaran tombol saat hover */
+}
+
+/* Galeri */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.gallery img {
+  max-width: 250px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Efek zoom saat hover */
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Formulir */
+form {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Testimoni */
+.testimonial {
+  background: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-left: 4px solid #009688;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivitas */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2em; /* Ukuran font lebih kecil di perangkat kecil */
   }
-  
-  header {
-    background-color: #009688;
-    color: white;
-    padding: 20px;
-    text-align: center;
+
+  header p {
+    font-size: 1em; /* Ukuran font lebih kecil di perangkat kecil */
   }
-  
-  section {
-    padding: 20px;
+
+  .services ul {
+    padding-left: 20px;
   }
-  
-  button {
-    background-color: #009688;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+  .gallery {
+    flex-direction: column;
+    align-items: center; /* Gambar terpusat di perangkat kecil */
   }
-  
-  button:hover {
-    background-color: #00796b;
-  }
-  
+
   .gallery img {
-    max-width: 250px;
-    margin: 10px;
-    border-radius: 8px;
+    max-width: 90%; /* Gambar lebih besar di perangkat kecil */
+    margin-bottom: 20px; /* Memberikan jarak antara gambar */
   }
-  
-  form {
-    margin-top: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-  }
-  
-  input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
+
   .testimonial {
-    background: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    border-left: 4px solid #009688;
-    border-radius: 4px;
-  }  
+    font-size: 0.9em;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 auto; /* Menjaga form agar tetap di tengah */
+  }
+
+  button {
+    width: 100%; /* Tombol lebih lebar di perangkat kecil */
+    padding: 12px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efek transisi pada tombol */
+  }
+}
+
+/* Responsivitas untuk tablet dan perangkat dengan lebar lebih besar */
+@media screen and (max-width: 1024px) {
+  .gallery {
+    flex-direction: row;
+    justify-content: center; /* Mengatur gambar galeri tetap terpusat */
+  }
+
+  .gallery img {
+    max-width: 200px;
+    margin: 10px;
+  }
+
+  form {
+    width: 80%;
+  }
+}
